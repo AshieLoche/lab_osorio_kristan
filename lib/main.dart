@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           // color: Colors.purple,
+          height: 200,
           width: double.infinity,
           margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.all(20),
@@ -29,9 +30,22 @@ class MyApp extends StatelessWidget {
               width: 2, 
             ),
           ),
-          transform: Matrix4.rotationZ(0.1),
-          child: const Center(
-            child: Text('Hello, world!'), // 这里可以替换为你想要显示的文本或组件
+          // transform: Matrix4.rotationZ(0.1),
+          child: Container(
+            // color: Colors.red,
+            height: 100,
+            width: 100,
+            margin: const EdgeInsets.all(29),
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.red,
+                width: 2,
+              ),
+            ),
+            child: const Center(
+              child: Text("Hello World"),
+            ),
           ),
         ),
         floatingActionButton: const FloatingActionButton(
