@@ -1,57 +1,54 @@
 import 'package:flutter/material.dart';
+// import 'package:studio_projects/sample.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  static const String _title = "Drawer Example";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: const Text("My App Bar",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
-          ),
+          title: const Text("MyApp"),
         ),
-        body: Container(
-          // color: Colors.purple,
-          height: 200,
-          width: double.infinity,
-          margin: const EdgeInsets.all(20),
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.blue,
-              width: 2, 
-            ),
-          ),
-          // transform: Matrix4.rotationZ(0.1),
-          child: Container(
-            // color: Colors.red,
-            height: 100,
-            width: 100,
-            margin: const EdgeInsets.all(29),
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.red,
-                width: 2,
+        body: const Text("Hello"),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: const <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                ),
+                child: Text(
+                  "Drawer Header",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24
+                  ),
+                ),
               ),
-            ),
-            child: const Center(
-              child: Text("Hello World"),
-            ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+              ),
+              ListTile(
+                leading: Icon(Icons.message),
+                title: Text("Message"),
+              ),
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text("Profile"),
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text("Settings"),
+              ),
+            ],
           ),
-        ),
-        floatingActionButton: const FloatingActionButton(
-          onPressed: null,
-          tooltip: 'increment',
-          child: Icon(Icons.add),
         ),
       ),
     );
