@@ -6,7 +6,6 @@ void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  static const String _title = "Drawer Example";
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Center(
             child: Text(
-                "Drawer Example",
+                "PokéDopt",
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -24,56 +23,42 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepPurpleAccent,
           elevation: 50.0,
         ),
-        body: const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Center(
-              child: Text(
-                "Chandelure",
-                style: TextStyle(
-                  color: Colors.deepPurpleAccent,
-                  fontSize: 40.0,
-                  
+            Container(
+              margin: const EdgeInsets.all(25.0),
+              child: const Center(
+                child: Text(
+                  "Chandelure",
+                  style: TextStyle(
+                    color: Colors.deepPurpleAccent,
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+
+            const Image(
+              image: AssetImage('assets/chandelure.jpg'),
+              width: 350,
+            ),
+
+            Container(
+              margin: const EdgeInsets.all(25.0),
+              child: const Center(
+                child: Text(
+                  "       Chandelure (Japanese: シャンデラ Chandela) is a dual-type Ghost/Fire Pokémon introduced in Generation V.\n\n       It evolves from Lampent when exposed to a Dusk Stone. It is the final form of Litwick.",
+                  style: TextStyle(
+                    color: Colors.deepPurple,
+                    fontSize: 25.0,
+                  ),
                 ),
               ),
             ),
           ],
         ),
-        // drawer: Drawer(
-        //   child: ListView(
-        //     padding: EdgeInsets.zero,
-        //     children: const <Widget>[
-        //       DrawerHeader(
-        //         decoration: BoxDecoration(
-        //           color: Colors.green,
-        //         ),
-        //         child: Text(
-        //           "Drawer Header",
-        //           style: TextStyle(
-        //             color: Colors.white,
-        //             fontSize: 24
-        //           ),
-        //         ),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.home),
-        //         title: Text("Home"),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.message),
-        //         title: Text("Message"),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.account_circle),
-        //         title: Text("Profile"),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.settings),
-        //         title: Text("Settings"),
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }
