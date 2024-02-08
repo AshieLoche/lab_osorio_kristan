@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
                 "PokéDopt",
                 style: TextStyle(
                   color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.0,
                 ),
             ),
           ),
