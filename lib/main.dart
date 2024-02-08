@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepPurpleAccent,
           elevation: 50.0,
         ),
-        body:Column(
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
